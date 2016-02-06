@@ -98,12 +98,20 @@ class BinaryTree {
 	}
 
 	size() {
-
+        return this.treeSize(this.root);
 	}
 
 	isEmpty() {
 
 	}
+	
+    treeSize(currentNode) {
+        if (currentNode == null) {
+            return 0;
+        }
+
+        return 1 + this.treeSize(currentNode.left) + this.treeSize(currentNode.right);
+    }
 }
 
 class Utils {
