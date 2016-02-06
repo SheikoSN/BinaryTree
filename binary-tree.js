@@ -31,7 +31,21 @@ class BinaryTree {
 	}
 
 	contains(data) {
+        var currentNode = this.root;
 
+        while (currentNode != null) {
+            if (currentNode.data == data) {
+                return true;
+            }
+
+            if (data < currentNode.data) {
+                currentNode = currentNode.left;
+            } else {
+                currentNode = currentNode.right;
+            }
+        }
+
+        return false;
 	}
 
 	remove(data) {
