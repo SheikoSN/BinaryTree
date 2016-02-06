@@ -102,7 +102,7 @@ class BinaryTree {
 	}
 
 	isEmpty() {
-
+        return this.root == null;
 	}
 	
     treeSize(currentNode) {
